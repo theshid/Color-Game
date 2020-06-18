@@ -1,0 +1,47 @@
+#title{
+	background: steelblue;
+padding: 20px;
+
+}
+
+#button{
+	text-align: center;
+	background: #FFFFFF
+
+
+}
+
+body{
+	font-family: "Montserrat", "Avenir";
+	background: #000000;
+	margin: 0px;
+
+}
+
+h1{
+	text-align: center;
+	color: white;
+	margin: 0;
+}
+
+.btns{
+	border: none;
+	font-size: 24px;
+	font-weight: 100;
+}
+
+.square {
+ width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+  
+  
+}
+
+#squares{
+	margin: 20px auto;
+	max-width: 600px;
+}
