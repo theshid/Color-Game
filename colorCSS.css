@@ -26,6 +26,7 @@ h1{
 
 button:hover{
 	background-color: steelblue;
+	color: #FFFFFF;
 }
 
 .btns{
@@ -37,11 +38,31 @@ button:hover{
 
 }
 
+.btns:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+#reset:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.selected{
+	background-color: steelblue;
+	color: #FFFFFF;
+}
+
 #reset{
 	border: none;
 	font-size: 24px;
 	background-color: #FFFFFF;
 	color: steelblue;
+}
+
+#reset:hover{
+	background-color: steelblue;
+	color: #FFFFFF;
 }
 
 .square {
