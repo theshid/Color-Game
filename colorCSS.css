@@ -24,10 +24,24 @@ h1{
 	margin: 0;
 }
 
+button:hover{
+	background-color: steelblue;
+}
+
 .btns{
 	border: none;
 	font-size: 24px;
 	font-weight: 100;
+	background-color: #FFFFFF;
+	color: steelblue;
+
+}
+
+#reset{
+	border: none;
+	font-size: 24px;
+	background-color: #FFFFFF;
+	color: steelblue;
 }
 
 .square {
