@@ -6,6 +6,8 @@ var resetBtn = document.querySelector("#reset");
 var btnHard = document.querySelector(".selected");
 var colorPicked = document.querySelector("#selectedColor");
 var message = document.querySelector("#message");
+var colorSelectedVar;
+var h1 = document.getElementById("title");
 
 init();
 
@@ -22,6 +24,7 @@ function setButtons() {
         buttons[i].addEventListener("click", function (evt) {
             buttons[0].classList.remove("selected");
             buttons[1].classList.remove("selected");
+            message.textContent = "";
             this.classList.add("selected");
             this.textContent === "Easy" ? numberSquares = 3 : numberSquares = 6;
             reset();
@@ -33,9 +36,12 @@ function clickEvents() {
     for (var i = 0; i < squares.length; i++) {
         squares[i].addEventListener("click", function (evt) {
         	var selectedColor = this.style.background;
-            if (selectedColor === colorPicked) {
+            if (selectedColor === colorSelectedVar) {
                 message.textContent = "You won!";
+                resetBtn.textContent = "Play Again?"
                 changeColor();
+                h1.style.background = selectedColor;
+
             } else{
             	message.textContent = "Try again loser";
             	this.style.background = "#000000";
@@ -44,9 +50,18 @@ function clickEvents() {
     }
 }
 
+function changeColor(){
+	for (var i = 0 ; i < squares.length; i++){
+		squares[i].style.background = colorSelectedVar;
+	}
+}
+
 function reset() {
     assignColorsToSquares();
     assignColorPicked();
+	h1.style.background = "steelblue" ;
+    message.textContent = "";
+    resetBtn.textContent = "New Colors";
     for (var i = 0; i < squares.length; i++) {
         if (colorsArray[i]) {
             squares[i].style.display = "block";
@@ -86,9 +101,11 @@ function assignColorsToSquares() {
     for (var i = 0; i < squares.length; i++) {
         squares[i].style.background = colorsArray[i];
     }
+
 }
 
 function assignColorPicked() {
     var color = colorsArray[Math.floor(Math.random() * colorsArray.length)];
     colorPicked.textContent = color;
+    colorSelectedVar = color;
 }

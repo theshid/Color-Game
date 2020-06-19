@@ -11,6 +11,10 @@ padding: 20px;
 
 }
 
+#selectedColor{
+	font-size: 200%;
+}
+
 body{
 	font-family: "Montserrat", "Avenir";
 	background: #000000;
@@ -22,6 +26,11 @@ h1{
 	text-align: center;
 	color: white;
 	margin: 0;
+	text-transform: uppercase;
+}
+
+button{
+	transition: all 0.3s;
 }
 
 button:hover{
@@ -35,6 +44,7 @@ button:hover{
 	font-weight: 100;
 	background-color: #FFFFFF;
 	color: steelblue;
+	text-transform: uppercase;
 
 }
 
@@ -58,6 +68,10 @@ button:hover{
 	font-size: 24px;
 	background-color: #FFFFFF;
 	color: steelblue;
+	text-transform: uppercase;
+	padding: 10px;
+	font-weight: bold;
+
 }
 
 #reset:hover{
@@ -72,10 +86,16 @@ button:hover{
 	float: left;
 	margin: 1.66%;
 	border-radius: 15%;
+	transition: background 0.5s;
   
   
 }
 
+#message{
+	width: 20%;
+	display: inline-block;
+	
+}
 #squares{
 	margin: 20px auto;
 	max-width: 600px;
